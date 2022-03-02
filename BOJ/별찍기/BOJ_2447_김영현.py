@@ -1,14 +1,14 @@
 # 별을 찍어줄 함수를 만든다
-def drawing_stars(n):
+def drawing_stars(stars):
     # 별을 찍을 리스트를 할당
     paper = []
-    for i in range(3 * len(n)):
+    for i in range(3 * len(stars)):
         # n이 3으로 나누어 떨어지지 않으면 n의 길이 만큼 공백
-        if i // len(n) == 1:
-            paper.append(n[i % len(n)] + ' ' * len(n) +n[i % len(n)])
+        if i // len(stars) == 1:
+            paper.append(stars[i % len(stars)] + ' ' * len(stars) +stars[i % len(stars)])
         
         else:
-            paper.append(n[i % len(n)] * 3)
+            paper.append(stars[i % len(stars)] * 3)
     
     return paper
 
